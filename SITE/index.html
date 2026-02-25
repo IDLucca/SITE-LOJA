@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZYONCODE | Automação de Alta Performance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { emerald: { 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857' }, cyan: { 400: '#22d3ee', 500: '#06b6d4', 600: '#0891b2' } } } }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white">
+    <div class="mesh-bg"></div>
+
+    <nav class="fixed w-full z-50 glass px-6 md:px-12 py-4 flex justify-between items-center border-b border-white/10">
+        <div class="flex items-center gap-2 text-xl font-black tracking-widest italic">
+            <div class="w-8 h-8 bg-gradient-to-br from-purple-600 to-pink-500 rounded-lg flex items-center justify-center text-sm not-italic animate-pulse">⚡</div>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-black shine-text">ZYON</span><span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-black shine-text">CODE</span>
+        </div>
+        <div class="hidden lg:flex space-x-8 text-xs font-semibold text-gray-400">
+            <a href="#services" class="hover:text-white transition">Serviços</a>
+            <a href="#products" class="hover:text-white transition">Produtos</a>
+            <a href="#about" class="hover:text-white transition">Sobre</a>
+            <a href="#contact" class="hover:text-white transition">Contato</a>
+        </div>
+        <div class="flex gap-4">
+            <button class="glass px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 hover:bg-white/10"><span class="text-gray-400">👤</span> Área do Cliente</button>
+            <a href="https://wa.me/5527992247169?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento!" target="_blank" class="btn-zyon px-5 py-2 rounded-lg text-xs font-bold bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-500 hover:to-pink-400">Orçamento Rápido</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-40 pb-20 px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="text-left pr-8">
+            <span class="inline-block px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-[10px] font-semibold mb-6">Automação inteligente para seu negócio</span>
+            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">Automação Inteligente para <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Potencializar</span> seu Negócio</h1>
+            <p class="text-gray-400 text-sm mb-10 leading-relaxed">Desenvolvemos soluções automatizadas sob medida para e-commerces, serviços e operações específicas.</p>
+            <div class="flex gap-4">
+                <a href="https://wa.me/5527992247169?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento!" target="_blank" class="btn-zyon px-8 py-3 rounded-lg text-sm font-bold flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-500 hover:to-pink-400">Solicitar Orçamento →</a>
+            </div>
+        </div>
+        <div class="glass p-8 rounded-2xl">
+            <div class="grid grid-cols-2 gap-6">
+                <div class="text-left space-y-2"><div class="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">🛒</div><h4 class="font-bold text-sm">Bots para E-commerce</h4><p class="text-[10px] text-gray-500 mt-1">Automação de pedidos, estoque e atendimento</p></div>
+                <div class="text-left space-y-2"><div class="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">🎧</div><h4 class="font-bold text-sm">Atendimento Automatizado</h4><p class="text-[10px] text-gray-500 mt-1">Soluções 24/7 para seus clientes</p></div>
+                <div class="text-left space-y-2"><div class="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">🔗</div><h4 class="font-bold text-sm">Integrações Personalizadas</h4><p class="text-[10px] text-gray-500 mt-1">Conecte sistemas e plataformas</p></div>
+                <div class="text-left space-y-2"><div class="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">📊</div><h4 class="font-bold text-sm">Análise de Dados</h4><p class="text-[10px] text-gray-500 mt-1">Relatórios e insights automatizados</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16"><h2 class="text-3xl font-bold mb-2">Nossos <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Serviços</span></h2></div>
+        <div id="services-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </section>
+
+    <section id="products" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12"><h2 class="text-3xl font-bold mb-2">Bots <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Mais Procurados!</span></h2></div>
+            <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8"></div>
+        </div>
+    </section>
+
+    <!-- Banner dos Parceiros -->
+    <section id="communities" class="py-6 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="glass rounded-xl p-6 flex items-center justify-between gap-6">
+                <div class="flex items-center gap-6">
+                    <div class="w-32 h-32 shrink-0">
+                        <img src="imgs/bloxy.png" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-black mb-2">Bloxy</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="bg-white/10 rounded-lg px-2 py-1">
+                                <div class="text-sm font-bold"><span class="counter" data-target="159">0</span> Membros</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg px-2 py-1">
+                                <div class="text-sm font-bold"><span class="counter" data-target="100">0</span> Clientes</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg px-2 py-1">
+                                <div class="text-sm font-bold">v2.5 Robux</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg px-2 py-1">
+                                <div class="text-sm font-bold">v2.0 Gamepasses</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg px-2 py-1">
+                                <div class="text-sm font-bold">v2.0 OAuth</div>
+                            </div>
+                        </div>
+                        <div class="mt-2 inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-500 px-3 py-1 rounded-lg">
+                            <span class="text-white font-bold text-xs">+90% Eficiência</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center gap-2 mt-4">
+                <button class="w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white font-bold transition">❮</button>
+                <button class="w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white font-bold transition">❯</button>
+            </div>
+            <div class="flex justify-center gap-2 mt-2">
+                <div class="w-2 h-2 rounded-full bg-purple-500"></div>
+                <div class="w-2 h-2 rounded-full bg-white/30"></div>
+                <div class="w-2 h-2 rounded-full bg-white/30"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estatísticas -->
+    <section id="stats" class="py-16 px-6 bg-white/[0.02]">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="glass p-6 rounded-2xl text-center">
+                    <div class="text-4xl font-black text-purple-400 mb-2" data-count="500">0</div>
+                    <div class="text-gray-400 text-xs">Bots Ativos</div>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center">
+                    <div class="text-4xl font-black text-purple-400 mb-2" data-count="1200">0</div>
+                    <div class="text-gray-400 text-xs">Clientes Satisfeitos</div>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center">
+                    <div class="text-4xl font-black text-purple-400 mb-2" data-count="98">0</div>
+                    <div class="text-gray-400 text-xs">% de Uptime</div>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center">
+                    <div class="text-4xl font-black text-purple-400 mb-2" data-count="24">0</div>
+                    <div class="text-gray-400 text-xs">/7 Suporte</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="about" class="py-20 px-6 bg-white/[0.01]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-2">Sobre a <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">ZYONCODE</span></h2>
+                <p class="text-gray-400 text-sm max-w-2xl mx-auto">Transformamos ideias em soluções automatizadas de alta performance</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">🎯</div>
+                    <h3 class="text-xl font-bold mb-4">Missão</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed"> Democratizar a automação digital, criando bots e soluções personalizadas que impulsionam o crescimento de negócios no Discord, WhatsApp e Web.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">👁️</div>
+                    <h3 class="text-xl font-bold mb-4">Visão</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed"> Ser referência em automação na América Latina, oferecendo soluções inovadoras que simplificam operações e maximizam resultados.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">💎</div>
+                    <h3 class="text-xl font-bold mb-4">Valores</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed"> Inovação, qualidade, transparência e compromisso com resultados. Cada cliente é único e merece atenção personalizada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 px-6 bg-white/[0.01]">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-2">Perguntas <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Frequentes</span></h2>
+            </div>
+            <div id="faq-grid" class="space-y-4"></div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="py-20 px-6 bg-white/[0.01]">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold mb-2">Fale <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Conosco</span></h2>
+                <p class="text-gray-400 text-sm">Tire suas dúvidas ou solicite um orçamento personalizado</p>
+            </div>
+            <a href="https://wa.me/5527992247169?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento!" target="_blank" class="btn-zyon inline-flex items-center gap-3 px-10 py-5 rounded-2xl text-lg font-bold bg-gradient-to-r from-purple-600 to-pink-500">
+                <span>💬</span> Orçamento Rápido
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/10 bg-white/[0.02]">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 text-xl font-black tracking-widest italic mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-500 rounded-lg flex items-center justify-center text-sm not-italic">🤖</div>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-black">ZYON</span><span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-black">CODE</span>
+                    </div>
+                    <p class="text-gray-500 text-xs">Automação de alta performance para seu negócio decolar!</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-xs text-gray-500">
+                        <li><a href="#home" class="hover:text-white transition">Início</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Serviços</a></li>
+                        <li><a href="#products" class="hover:text-white transition">Produtos</a></li>
+                        <li><a href="#about" class="hover:text-white transition">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm mb-4">Serviços</h4>
+                    <ul class="space-y-2 text-xs text-gray-500">
+                        <li><a href="#" class="hover:text-white transition">Bot para E-commerce</a></li>
+                        <li><a href="#" class="hover:text-white transition">Atendimento Automatizado</a></li>
+                        <li><a href="#" class="hover:text-white transition">Bots Personalizados</a></li>
+                        <li><a href="#" class="hover:text-white transition">OAuth & Verificação</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm mb-4">Contato</h4>
+                    <ul class="space-y-2 text-xs text-gray-500">
+                        <li>📧 contato@zyoncode.com</li>
+                        <li>💬 Discord: zyoncode#0001</li>
+                        <li>📱 WhatsApp: (00) 00000-0000</li>
+                    </ul>
+                    <div class="flex gap-3 mt-4">
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-purple-500/20 transition">📱</a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-purple-500/20 transition">💬</a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-purple-500/20 transition">📧</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-gray-500 text-xs">© 2024 ZYONCODE. Todos os direitos reservados. | Desenvolvido com 💜 pela ZYONCODE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Contador animado
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Intersection Observer para ativar quando visível
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const communitiesSection = document.getElementById('communities');
+        if (communitiesSection) {
+            observer.observe(communitiesSection);
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+class UI {
+    static toggleDetails(index: number) {
+        const detailsDiv = document.getElementById(`details-${index}`);
+        const btnIcon = document.getElementById(`icon-${index}`);
+        if (detailsDiv && btnIcon) {
+            if (detailsDiv.classList.contains('hidden')) {
+                detailsDiv.classList.remove('hidden');
+                btnIcon.innerText = '⌃';
+            } else {
+                detailsDiv.classList.add('hidden');
+                btnIcon.innerText = '⌄';
+            }
+        }
+    }
+
+    static render() {
+        const servicesData = [
+            { 
+                title: "Bots para Lojas", icon: "🛒", 
+                desc: "Solução completa de vendas no Discord e Web: gerencie produtos, cupons, preços e estoque com facilidade.",
+                items: [
+                    "Painel de produtos: adicionar, editar, remover e precificar",
+                    "Cupons de desconto: criar, editar e deletar direto pelo site",
+                    "Atualização de estoque e preços automática",
+                    "Intermediador de pagamentos com saques instantâneos (1/sec)",
+                    "Widget de loja para incorporar em seu site"
+                ] 
+            },
+            { 
+                title: "Atendimento Automatizado", icon: "💬", 
+                desc: "Chatbot interativo para o Discord, WhatsApp e Web. Aproxime-se de clientes onde eles estejam.",
+                items: [
+                    "Menu interativo para seleção de produto e jogo",
+                    "Integração nativa com WhatsApp Business API",
+                    "Chat embed em sites personalizados",
+                    "Logs públicas de interações e vendas"
+                ] 
+            },
+            { 
+                title: "Bots Personalizados", icon: "⚙️", 
+                desc: "Desenvolvemos bots sob medida: verificação, backup, auto-role e automações específicas para seu servidor.",
+                items: [
+                    "Verificação via botão e auto-role configurável",
+                    "Reaplicação em massa de cargos com um clique",
+                    "Backup & restauração de membros (≈ membros a 1/sec)",
+                    "Site personalizado com painel de controle completo",
+                    "Tudo o que você procura, você encontra aqui!"
+                ] 
+            }
+        ];
+
+        const productsData = [
+            { 
+                name: "Bot de Robux & Pass", price: 249.90, desc: "👁️ Maior visibilidade para sua comunidade", tag: "Mais Vendido!", isNew: true,
+                features: [
+                    "👁️ Maior visibilidade para sua comunidade",
+                    "⚡ Otimização total nos processos de venda",
+                    "📈 Resultados reais e mensuráveis para administradores e lojistas",
+                    "⚙️ Painel avançado de configuração do Bot",
+                    "🎟️ Painel para criar, editar e deletar cupons de desconto",
+                    "💸 Intermediador: receba no site e saque instantâneo em até 10s",
+                    "✅ Sistema automático de entrega e print do comprovante",
+                    "🤖 Dois sistemas de atendimento integrados (robux): v1.0, v2.0 e v3.0",
+                    "🎮 Sistema de atendimento integrado (pass): v2.0",
+                    "🧠 Configuração automática de servidor em 2 cliques via IA",
+                    "📦 Entrega manual e semiautomática de pedidos",
+                    "🍪 Envio de todos os pedidos com 1 clique via cookie do Roblox",
+                    "🌐 Novo Website de Configuração",
+                    "⭐ Sistema Avançado de Avaliações com notas de 1 a 5 estrelas",
+                    "📊 Dashboard de Estatísticas para análise das avaliações",
+                    "🤝 Padronização de Comissões para parceiros (ex: youtubers)",
+                    "📝 Textos automáticos: configure atalhos para mensagens prontas",
+                    "✏️ Todos os textos do bot editáveis pelo painel",
+                    "🛍️ Novo Sistema de Vendas de Gamepass com configuração",
+                    "🔐 Cupons exclusivos: limite de uso, valor mínimo e restrição",
+                    "🏅 Cargos automáticos atribuídos conforme o valor da compra",
+                    "📱 Comando /gerarpix: gere QR Code Pix rápido",
+                    "🧭 Mensagens interativas guiando a criação de Gamepass"
+                ]
+            },
+            { 
+                name: "Bot de OAuth v2.0", price: 39.90, desc: "👤 Cargo ao se verificar no servidor", tag: "", isNew: true,
+                features: ["Verificação segura em 1 clique", "Backup de até 100k membros", "Restauração rápida (1/sec)", "Dashboard de gestão completo", "Sistema anti-raid e VPN"]
+            }
+        ];
+
+        const feedbacksData = [
+            { name: "Borges", role: "CEO, Alpha Bux #4K", text: "Uma das melhores escolhas que fiz foi automatizar a Alpha Bux. A automação trouxe um grande valor ao meu negócio!" },
+            { name: "Cash", role: "CEO, Cashx Community", text: "Minhas vendas aumentaram, a organização do meu servidor também melhorou. Totalmente seguro!" },
+            { name: "Cereja", role: "CEO, Cherry Imperium", text: "Eu não preciso mais atender os clientes na hora do pagamento, o bot faz tudo por mim! Nota 10/10." }
+        ];
+
+        // 1. Render Serviços
+        const servicesGrid = document.getElementById('services-grid');
+        if (servicesGrid) {
+            servicesGrid.innerHTML = servicesData.map((s: any) => `
+                <div class="glass p-8 rounded-2xl flex flex-col h-full bg-[#0a0a0a]/50 border-white/5">
+                    <div class="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center text-xl mb-6 text-blue-400">${s.icon}</div>
+                    <h3 class="text-xl font-bold mb-3">${s.title}</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6 flex-1">${s.desc}</p>
+                    <ul class="space-y-4">
+                        ${s.items.map((item: string) => `
+                            <li class="text-[11px] text-gray-400 flex items-start gap-3">
+                                <span class="text-blue-500 mt-0.5 shrink-0">🔹</span> 
+                                <span class="leading-relaxed">${item}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `).join('');
+        }
+
+        // 2. Render Produtos
+        const productsGrid = document.getElementById('products-grid');
+        if(productsGrid) {
+            productsGrid.innerHTML = productsData.map((p: any, index: number) => `
+                <div class="glass p-8 rounded-2xl relative bg-[#0a0a0a]/50 border-white/5 h-fit">
+                    ${p.isNew ? `<span class="absolute top-4 right-4 bg-blue-500 text-white text-[9px] font-bold px-2 py-1 rounded">NOVO!</span>` : ''}
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-xl font-bold max-w-[70%]">${p.name}</h3>
+                        ${p.tag ? `<span class="text-blue-400 text-[10px] font-bold text-right">${p.tag.replace(' ', '<br>')}</span>` : ''}
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400 text-xs mb-6">
+                        <span>🎧</span> Atendimento 24/7
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-gray-500 text-xs line-through block mb-1">R$ ${(p.price * 1.3).toFixed(2).replace('.', ',')}/mês</span>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-3xl font-bold text-white">R$ ${p.price.toFixed(2).replace('.', ',')}</span>
+                            <span class="text-gray-500 text-xs">/mês</span>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-gray-400 mb-6 h-8">${p.desc}</p>
+                    
+                    <button onclick="UI.toggleDetails(${index})" class="w-full py-3 bg-white/5 hover:bg-white/10 rounded-lg text-sm font-semibold transition flex justify-between px-6 items-center">
+                        Detalhes <span id="icon-${index}" class="text-gray-500 text-lg">⌄</span>
+                    </button>
+                    
+                    <div id="details-${index}" class="hidden mt-4 pt-4 border-t border-white/5 text-left transition-all max-h-64 overflow-y-auto pr-2 custom-scrollbar">
+                        <ul class="space-y-3">
+                            ${p.features.map((f: string) => `
+                                <li class="text-[11px] text-gray-400 flex items-start gap-2">
+                                    <span class="text-blue-500 shrink-0 mt-0.5">🔹</span> 
+                                    <span class="leading-relaxed">${f}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 3. Render Feedbacks
+        const feedbacksGrid = document.getElementById('feedbacks-grid');
+        if (feedbacksGrid) {
+            feedbacksGrid.innerHTML = feedbacksData.map((f: any) => `
+                <div class="glass p-8 rounded-2xl bg-[#0a0a0a]/50 border-white/5 h-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-sm font-bold">👤</div>
+                        <div>
+                            <h4 class="font-bold text-sm">${f.name}</h4>
+                            <p class="text-[10px] text-gray-500">${f.role}</p>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-gray-400 leading-relaxed text-justify">"${f.text}"</p>
+                </div>
+            `).join('');
+        }
+    }
+}
+window.onload = () => UI.render();
